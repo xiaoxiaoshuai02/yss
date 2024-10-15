@@ -57,9 +57,21 @@
     </div>
 </div>
 <!--音乐部分-->
-<audio autoplay loop id="music">
-    <source src="music.mp3" />
+<!--<audio autoplay loop id="music">-->
+<!--    <source src="music.mp3" />-->
+<!--</audio>-->
+
+<audio id="myAudio">
+    <source src="music.mp3" type="audio/mpeg">
 </audio>
+
+<script>
+    window.addEventListener('load', function () {
+        var audio = document.getElementById('myAudio');
+        audio.play();
+    });
+</script>
+
 <iframe  id="iframMusic" allow="autoplay" style="display:none" src="blank.mp3"></iframe>
 <script src="jquery.min.js"></script>
 <script src="fire.js"></script>
